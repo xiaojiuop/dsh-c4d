@@ -1,0 +1,21 @@
+# dsh-c4d：C4D 风格参数化三维建模技能 + 工具插件（DeepSeek Harness 插件）。
+#
+# 安装即同时注册：
+#   1. 技能 dsh-c4d（C4D 风格参数化建模完整 SOP）
+#   2. 工具 c4d_view / c4d_info / c4d_model / c4d_export / c4d_panel
+#
+# 能力边界：独立网格内核实现，不连接 Cinema 4D 主程序，不读写 .c4d 工程文件；
+#          导出支持 STL/OBJ/DXF/SVG，STEP/IGES 当前版本未接入。
+#
+# 插件自带空配置，绝不弄崩启动；无需任何账号或密钥。可选配置：
+#
+#   - id: dsh-c4d
+#     config:
+#       outputDir: E:\models     # 可选：产物目录，默认写入会话工作目录 .c4d
+#       defaultView: quad        # 可选：默认渲染视图 perspective/quad/views
+#       defaultSize: 720         # 可选：默认渲染边长像素
+
+- insert:
+    - id: dsh-c4d
+      name: dsh-c4d
+      config: {}

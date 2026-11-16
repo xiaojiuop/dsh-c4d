@@ -1,0 +1,14 @@
+# 构建与演示产物
+*.tgz
+.c4d/
+.c4d-demo/
+.smoke-c4d/
+
+# 依赖
+node_modules/
+
+# 编辑器 / 系统
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

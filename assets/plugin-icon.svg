@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#e8ecf1"/>
+      <stop offset="1" stop-color="#c3cad4"/>
+    </linearGradient>
+  </defs>
+  <rect width="128" height="128" rx="24" fill="url(#bg)"/>
+  <!-- 四视图布局参考线 -->
+  <line x1="64" y1="10" x2="64" y2="118" stroke="#9aa5b5" stroke-width="1.5" stroke-dasharray="4 3"/>
+  <line x1="10" y1="64" x2="118" y2="64" stroke="#9aa5b5" stroke-width="1.5" stroke-dasharray="4 3"/>
+  <!-- 透视象限：圆环 + 球 -->
+  <g transform="translate(37,37)">
+    <ellipse cx="0" cy="6" rx="20" ry="8" fill="none" stroke="#5b6b85" stroke-width="5"/>
+    <circle cx="0" cy="-10" r="9" fill="#7f96b3"/>
+  </g>
+  <!-- 顶视象限：同心圆 -->
+  <g transform="translate(91,37)">
+    <circle r="20" fill="none" stroke="#5b6b85" stroke-width="4"/>
+    <circle r="9" fill="none" stroke="#5b6b85" stroke-width="4"/>
+  </g>
+  <!-- 前视象限：胶囊轮廓 -->
+  <g transform="translate(37,91)">
+    <rect x="-9" y="-18" width="18" height="36" rx="9" fill="none" stroke="#5b6b85" stroke-width="4"/>
+  </g>
+  <!-- 右视象限：三角 -->
+  <g transform="translate(91,91)">
+    <path d="M 0 -18 L 17 14 L -17 14 Z" fill="none" stroke="#5b6b85" stroke-width="4" stroke-linejoin="round"/>
+  </g>
+</svg>

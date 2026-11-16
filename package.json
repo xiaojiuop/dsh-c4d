@@ -1,0 +1,96 @@
+{
+  "name": "dsh-c4d",
+  "version": "1.0.0",
+  "description": "C4D 风格的参数化三维建模插件（独立实现，无需安装 Cinema 4D）：对象管理器 JSON 场景、14 种图元、挤出/旋转/扫描/放样、MoGraph 克隆、布尔运算、四视图渲染、STL/OBJ/DXF/SVG 导出与常驻离线 CAD 面板。",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./skills/*": "./skills/*",
+    "./config": "./lib/config.js",
+    "./tools": "./lib/tools.js",
+    "./scene": "./lib/scene.js",
+    "./panel": "./lib/panel.js",
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib",
+    "skills",
+    "assets",
+    "cordis.patch.yml",
+    "README.md",
+    "README.zh.md",
+    "CHANGELOG.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "node --test \"test/*.test.mjs\"",
+    "demo": "node skills/dsh-c4d/scripts/demo.mjs",
+    "smoke": "node skills/dsh-c4d/scripts/demo.mjs --out .smoke-c4d",
+    "prepack": "node --test \"test/*.test.mjs\""
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "dsh-plugins",
+    "deepseek",
+    "deepseek-harness",
+    "cordis",
+    "cad",
+    "c4d",
+    "cinema4d",
+    "3d",
+    "3d-modeling",
+    "parametric",
+    "mograph",
+    "boolean",
+    "mesh",
+    "stl",
+    "3d-printing",
+    "obj",
+    "dxf",
+    "svg"
+  ],
+  "license": "MIT",
+  "author": "九九",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xiaojiuop/dsh-c4d.git"
+  },
+  "homepage": "https://github.com/xiaojiuop/dsh-c4d#readme",
+  "bugs": {
+    "url": "https://github.com/xiaojiuop/dsh-c4d/issues"
+  },
+  "icon": "./assets/plugin-icon.svg",
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "engines": {
+    "node": "^22.19.0 || >=24.0.0",
+    "dsh": ">=0.2.2-rc.3"
+  },
+  "peerDependenciesMeta": {
+    "opencascade.js": {
+      "optional": true
+    }
+  },
+  "dshMarket": {
+    "category": "creative",
+    "features": [
+      "对象管理器 JSON 场景，C4D 式参数化建模",
+      "14 种图元 + 挤出/旋转/扫描/放样 + MoGraph 克隆 + 布尔运算",
+      "纯 JS 软件渲染器：透视与四视图预览，图像直接进聊天卡片",
+      "导出 STL / OBJ / DXF / SVG，STL 可直接 3D 打印",
+      "常驻离线 CAD 面板：拖拽旋转、滚轮缩放、数字键切换视图"
+    ],
+    "boundary": "独立实现，不连接 Cinema 4D 主程序，不读写 .c4d 工程文件；STEP/IGES 当前版本未接入。"
+  }
+}
+
